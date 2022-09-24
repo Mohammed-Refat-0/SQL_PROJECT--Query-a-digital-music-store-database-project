@@ -1,0 +1,62 @@
+first query:
+
+ SELECT t1.Name,
+       sum(t1.total_sales_of_track) AS total_genre_sales
+FROM
+  (SELECT InvoiceLine.TrackId AS Truck_id,
+          InvoiceLine.UnitPrice AS unit_price,
+          genre.Name,
+          count(*) AS number_of_tracks_sold,
+          (InvoiceLine.UnitPrice*count(*)) AS total_sales_of_track
+   FROM InvoiceLine
+   JOIN Track ON Track.TrackId=InvoiceLine.TrackId
+   JOIN Genre ON genre.GenreId=Track.GenreId
+   GROUP BY truck_id) t1
+GROUP BY 1
+ORDER BY 2 DESC
+
+
+second query:
+
+ SELECT genre.Name,
+       count(*) AS number_of_tracks
+FROM Track
+JOIN Genre ON genre.GenreId=Track.GenreId
+GROUP BY genre.Name
+ORDER BY count(*) DESC
+
+
+Third query:
+
+SELECT Genre.Name AS Genre,
+       Avg(unitprice) AS average_track_price
+FROM Genre
+JOIN track ON track.GenreId=Genre.GenreId
+GROUP BY Genre.name
+ORDER BY 2 DESC
+
+
+fourth query:
+
+SELECT sum(t1.Above_AVG_TRACK_LENGTH*t1.quantity_sold) AS number_of_tracks_solds_above_average_length,
+       sum(t1.Below_AVG_TRACK_LENGTH*t1.quantity_sold) AS number_of_tracks_solds_below_avf_length
+FROM
+  (SELECT InvoiceLine.TrackId,
+          sum(InvoiceLine.Quantity) AS quantity_sold,
+          InvoiceLine.UnitPrice,
+          Track.Milliseconds,
+          CASE
+              WHEN Track.Milliseconds> 393599.212103911 THEN 1
+              ELSE 0
+          END AS Above_AVG_TRACK_LENGTH,
+          CASE
+              WHEN Track.Milliseconds<393599.212103911 THEN 1
+              ELSE 0
+          END AS Below_AVG_TRACK_LENGTH
+   FROM track
+   JOIN InvoiceLine ON track.TrackId=InvoiceLine.TrackId
+   GROUP BY InvoiceLine.TrackId) t1
+
+
+
+
