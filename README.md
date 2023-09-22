@@ -7,4 +7,4 @@ Files:\
 [Second_query.sql](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/Second_query.sql): contains a query on the numbers of tracks on the music database by genre.\
 [Third_query.sql](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/Third_query.sql): contains a query on the average track's price by genre.\
 [Fourth_query.sql](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/Fourth_query.sql): contains a query on the numbers of traks sold by a duration length brackets\
-[Presentation.pdf](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/presentation.pdf): contains a presentation of different visualizations and comments on the gathered insights of my queries to prsent and communicate them to the chinook team. 
+[Presentation.pdf](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/presentation.pdf): contains a presentation of different visualizations and comments on the gathered insights of my queries to pesent and communicate them to the chinook team. 
