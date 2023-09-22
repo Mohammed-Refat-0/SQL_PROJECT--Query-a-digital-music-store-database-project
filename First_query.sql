@@ -1,4 +1,4 @@
- SELECT t1.Name,
+SELECT t1.Name,
        sum(t1.total_sales_of_track) AS total_genre_sales
 FROM
   (SELECT InvoiceLine.TrackId AS Truck_id,
