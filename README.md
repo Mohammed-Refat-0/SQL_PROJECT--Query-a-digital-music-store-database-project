@@ -1,7 +1,6 @@
-# SQL PROJECT
-## Query a digital music store database
+# SQL PROJECT - Query a digital music store database
 in this project, I queried the Chinook Database using SQL. The Chinook Database holds information about a music store. the insights I gathered assist the Chinook team with understanding the media in their store, their customers, employees, and trends which allows them to make informed decisions to increase their sales and improve their services.\
-Files:\
+## Files
 [chinook.db](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/chinook.db): Contains the music store database, which is composed of several tables.\
 [First_query.sql](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/First_query.sql): contains a query of sales by music genre.\
 [Second_query.sql](https://github.com/Mohammed-Refat-0/Query-a-digital-music-store-database-project/blob/main/Second_query.sql): contains a query on the numbers of tracks on the music database by genre.\
