@@ -1,2 +1,2 @@
 # mark .sql files to linguist
-*.sql linguist-language=Java
+*.sql linguist-language=SQL
